@@ -15,7 +15,7 @@ services:
          - ../:/apps
          - ./conf/nginx:/etc/nginx
          # 日志存放路径，需要同级目录创建本目录
-         # - ../logs:/var/log/wm_logs
+         - ../logs:/apps/logs
          - ./conf/nginx/nginx.conf:/usr/local/openresty/nginx/conf/nginx_template.conf
          # - ./conf:/etc
          # 测试目录
