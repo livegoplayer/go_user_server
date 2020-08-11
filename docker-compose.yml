@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+    go_server_common:
+      build: ./
+      container_name: go_user_server
+      environment:
+         USER_SERVER_NAME: "www.52db.work"
+      ports:
+         - "80:80"
+         # - "81:81"
+         - "8888:8888"
+         # - "8080:8080"
+      volumes:
+         - ../:/apps
+         - ./conf/nginx:/etc/nginx
+         # 日志存放路径，需要同级目录创建本目录
+         # - ../logs:/var/log/wm_logs
+         - ./conf/nginx/nginx.conf:/usr/local/openresty/nginx/conf/nginx_template.conf
+         # - ./conf:/etc
+         # 测试目录
+         - ./:/test
+         - ./sh:/sh
+         - ./supervisor:/supervisor
+      command: /sh/start.sh
+
+
