@@ -47,6 +47,7 @@ RUN groupadd -r $group && useradd -g $group $user
 #所有sh文件复制到/sh
 RUN mkdir /sh
 COPY ./sh /sh/
+chmod +x ./sh/*.sh
 
 #复制Supervisor文件
 RUN mkdir /supervisor
