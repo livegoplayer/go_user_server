@@ -19,9 +19,9 @@ services:
          - ./conf/nginx/nginx.conf:/usr/local/openresty/nginx/conf/nginx_template.conf
          # - ./conf:/etc
          # 测试目录
-         - ./:/test
-         - ./sh:/sh
-         - ./supervisor:/supervisor
+         # - ./:/test
+         # - ./sh:/sh
+         # - ./supervisor:/supervisor
       command: /sh/start.sh
 
 
