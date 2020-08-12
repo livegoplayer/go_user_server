@@ -57,6 +57,7 @@ COPY ./supervisor /supervisor
 RUN mkdir /test
 
 #logs目录
+RUN mkdir /apps
 RUN mkdir /apps/logs
 RUN chmod -R 755 /apps/logs
 
