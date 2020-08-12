@@ -56,6 +56,10 @@ COPY ./supervisor /supervisor
 #调试目录
 RUN mkdir /test
 
+#logs目录
+RUN mkdir /apps/logs
+RUN chmod -R 755 /apps/logs
+
 #go env
 ENV GOPROXY=https://goproxy.io
 
