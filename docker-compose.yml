@@ -6,6 +6,7 @@ services:
       container_name: go_user_server
       environment:
          USER_SERVER_NAME: "www.52db.club"
+         RESTY_CONFIG_OPTIONS_MORE: "--with-echo_nginx_module"
       ports:
          - "80:80"
          # - "81:81"
