@@ -5,7 +5,7 @@ services:
       build: ./
       container_name: go_user_server
       environment:
-         USER_SERVER_NAME: "www.52db.club"
+         USER_SERVER_NAME: "club.52db.xyz"
       ports:
          - "80:80"
          # - "81:81"
