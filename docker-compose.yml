@@ -7,6 +7,8 @@ services:
       environment:
          USER_SERVER_NAME: "www.52db.club"
          RESTY_CONFIG_OPTIONS_MORE: "--with-echo_nginx_module"
+      extra_hosts:
+         - "www.52db.club:127.0.0.1"
       ports:
          - "80:80"
          # - "81:81"

@@ -201,10 +201,3 @@ fi
 
 cp /etc/nginx/config/grpc_proxy_template.conf /etc/nginx/config/grpc_proxy.conf
 envsubst '$PROXY_BUFFER_SIZE'< /etc/nginx/config/grpc_proxy_template.conf > /etc/nginx/config/grpc_proxy.conf
-
-
-
-
-
-
-
