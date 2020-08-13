@@ -23,6 +23,6 @@ services:
          # - ./:/test
          # - ./sh:/sh
          # - ./supervisor:/supervisor
-      command: echo "127.0.0.1 www.52db.club" >> /etc/hosts && /sh/start.sh
+      command: /sh/start.sh
 
 
