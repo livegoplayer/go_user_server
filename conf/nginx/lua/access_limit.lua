@@ -6,8 +6,12 @@ local request_uri_without_args = ngx.re.sub(request_uri, "\\?.*", "");
 local function mylog(msg)
     
     local cmt_time = '//'..os.date("%m-%d_%H:%M:%S", os.time());
-    local file = io.open("/apps/logs/wm_main_lua.log","a+")
-    file:write(msg..cmt_time..'\n')
+    local file = io.open("/apps/logs/wm_main_lua.log","a+");
+    if not file then
+    	os.execute('mkdir /apps/logs/wm_main_lua.log');
+	    file = io.open("/apps/logs/wm_main_lua.log","a+");
+    end
+    file:write(msg..cmt_time..'\n');
     file:flush();
     file:close();
 end
