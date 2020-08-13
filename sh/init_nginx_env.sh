@@ -203,8 +203,6 @@ cp /etc/nginx/config/grpc_proxy_template.conf /etc/nginx/config/grpc_proxy.conf
 envsubst '$PROXY_BUFFER_SIZE'< /etc/nginx/config/grpc_proxy_template.conf > /etc/nginx/config/grpc_proxy.conf
 
 
-cat /usr/local/openresty/nginx/conf/nginx.conf
-
 
 
 
