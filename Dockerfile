@@ -56,6 +56,9 @@ COPY ./supervisor /supervisor
 #调试目录
 RUN mkdir /test
 
+#暂时这样做
+RUN echo "127.0.0.1 www.52db.club" >> /etc/hosts; 
+
 #go env
 ENV GOPROXY=https://goproxy.io
 
