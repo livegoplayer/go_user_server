@@ -24,7 +24,7 @@ services:
          # 测试目录
          # - ./:/test
          # - ./sh:/sh
-         # - ./supervisor:/supervisor
+         - ./supervisor:/supervisor
       command: /sh/start.sh
 
 
