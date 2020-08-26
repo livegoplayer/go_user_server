@@ -58,4 +58,5 @@ RUN mkdir /test
 
 #go env
 ENV GOPROXY=https://goproxy.io
+ENV GO111MODULE=on
 
